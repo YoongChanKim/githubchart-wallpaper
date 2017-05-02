@@ -1,0 +1,37 @@
+
+body {
+    background-image: url(wallpaper);
+    background-repeat: no-repeat;
+    background-size: 1920px 1080px;
+    width: 1910px;
+    height: 1080px;
+    overflow: hidden;
+}
+
+h1 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 80px;
+    font-family:sans-serif;
+
+    position: absolute;
+    text-align: center;
+    left: 0;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+.git {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 0%;
+    width: 100%;
+}
+
+img {
+    background-color: rgba(250, 250, 250, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+}
+

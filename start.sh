@@ -1,0 +1,1 @@
+./update_background.sh & 
