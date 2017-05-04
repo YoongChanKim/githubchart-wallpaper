@@ -4,15 +4,14 @@ Simple Check Commit Calendar Your Wallpaper on Linux
 ### Sample
 ![](/images/output.png)
 
-### Usage
-Download
+### Download
 
 ```sh
 $ git clone https://github.com/FuZer/githubchart-wallpaper.git
 $ cd githubchart-wallpaper
 ```
 
-Config
+### Config
 
 ```
 $ vi update_background.sh
@@ -24,7 +23,7 @@ phrases="Have a nice day $username!" #<--set here your phrases
 
 ```
 
-Start
+### Start
 
 ```
 $ ./start.sh
