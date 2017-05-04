@@ -8,23 +8,33 @@ body {
     overflow: hidden;
 }
 
-h1 {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 80px;
-    font-family:sans-serif;
-
+.clock {
     position: absolute;
     text-align: center;
     left: 0;
-    top: 30%;
+    top: 35%;
     width: 100%;
     text-align: center;
+}
+
+.clock h1 {
+    color: rgba(255, 255, 255, 1.0);
+    font-size: 150px;
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.clock h2 {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 50px;
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .git {
     position: absolute;
     text-align: center;
-    top: 50%;
+    top: 73%;
     left: 0%;
     width: 100%;
 }
