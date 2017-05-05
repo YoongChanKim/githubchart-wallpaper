@@ -9,7 +9,6 @@ html = """
 
 <head>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 
 <body>
@@ -46,14 +45,14 @@ body {
     color: rgba(255, 255, 255, 1.0);
     font-size: 150px;
     margin: 0px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: sans-serif;
 }
 
 .clock h2 {
     color: rgba(255, 255, 255, 0.7);
     font-size: 50px;
     margin: 0px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: sans-serif;
 }
 
 .git {
