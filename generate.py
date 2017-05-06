@@ -1,7 +1,7 @@
 #! /usr/bin/python3
 
-import sys
 import time
+import subprocess
 
 html = """
 <!DOCTYPE html>
@@ -9,6 +9,7 @@ html = """
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 </head>
 
 <body>
@@ -45,14 +46,14 @@ body {
     color: rgba(255, 255, 255, 1.0);
     font-size: 150px;
     margin: 0px;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif
 }
 
 .clock h2 {
     color: rgba(255, 255, 255, 0.7);
     font-size: 50px;
     margin: 0px;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif
 }
 
 .git {
@@ -71,16 +72,28 @@ img {
 
 """
 
-width = sys.argv[1]
-height = sys.argv[2]
-user = sys.argv[3]
-phrases = sys.argv[4]
+width = "1920"
+height = "1080"
+user = "FuZer"
+phrases = "Have a nice day, " + user + "."
 
-time_format = "{}:{}".format(time.strftime("%H"), time.strftime("%M"))
+pred = 0
 
-with open('web/wallpaper.html', 'w') as html_file:
-    html_file.write(html % (time_format, phrases, user))
+subprocess.run("gsettings set org.gnome.desktop.background picture-uri file://$HOME/.wallpaper.png", shell=True)
 
-with open('web/style.css', 'w') as css_file:
-    css_file.write(css % (width, height, str(int(width)-10), height))
+while True:
+    if(time.strftime("%M") == pred):
+        time.sleep(1)
+        continue
+
+    time_format = "{}:{}".format(time.strftime("%H"), time.strftime("%M"))
+
+    with open('web/wallpaper.html', 'w') as html_file:
+        html_file.write(html % (time_format, phrases, user))
+
+    with open('web/style.css', 'w') as css_file:
+        css_file.write(css % (width, height, str(int(width)-10), height))
+
+    subprocess.run('gnome-web-photo --timeout=30 --mode=photo --width={} --file "web/wallpaper.html" --user-css="web/style.css"  $HOME/.wallpaper.png'.format(width), shell=True)
+    pred = time.strftime("%M")
 

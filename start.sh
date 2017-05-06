@@ -1,1 +1,1 @@
-./update_background.sh & 
+./generate.py 2>>/dev/null & 

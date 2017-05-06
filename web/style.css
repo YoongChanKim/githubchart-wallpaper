@@ -21,14 +21,14 @@ body {
     color: rgba(255, 255, 255, 1.0);
     font-size: 150px;
     margin: 0px;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif
 }
 
 .clock h2 {
     color: rgba(255, 255, 255, 0.7);
     font-size: 50px;
     margin: 0px;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif
 }
 
 .git {
