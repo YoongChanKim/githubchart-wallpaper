@@ -3,6 +3,8 @@
 import time
 import subprocess
 
+import config
+
 html = """
 <!DOCTYPE html>
 <html>
@@ -72,10 +74,10 @@ img {
 
 """
 
-width = "1920"
-height = "1080"
-user = "FuZer"
-phrases = "Have a nice day, " + user + "."
+width = config.width
+height = config.height
+user = config.user
+phrases = config.phrases
 
 pred = 0
 
