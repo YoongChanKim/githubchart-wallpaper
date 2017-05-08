@@ -14,12 +14,12 @@ $ cd githubchart-wallpaper
 ### Config
 
 ```
-$ vi update_background.sh
+$ vi config.py 
 
-screen_width="" #<--set here your screen's width dimension
-screen_heigth="" #<--set here your screen's height dimension
+width="" #<--set here your screen's width dimension
+heigth="" #<--set here your screen's height dimension
 username="" #<--set here your github username
-phrases="Have a nice day $username!" #<--set here your phrases
+phrases="" #<--set here your phrases
 
 ```
 
